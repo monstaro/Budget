@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Biryani:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
-  <body>
-    <nav>
-      <img class="rocket-icon" src="./assets/rocket.svg" alt="Rocket Icon">
-      <div class="nav-icons">
-        <img class="nav-icon" src="./assets/dashboard.svg" alt="Dashboard Icon">
-        <img class="nav-icon" src="./assets/transactions.svg" alt="Transactions Icon">
-        <img class="nav-icon" src="./assets/profile.svg" alt="Profile Icon">
-      </div>
-      <img id="hide" class="rocket-icon" src="./assets/rocket.svg" alt="Rocket Icon">
-    </nav>
-    <main>
-      <section class="left-section">
-        <h1>Your Budget</h1>
-        <div class="greeting-banner">
-          <h2>Welcome, Oscar!</h2>
-        </div>
-        <div class="current-numbers">
-          <section class="current-num-card">
-            <h3>Income</h3>
-            <p>$2,560</p>
-          </section>
-          <section class="current-num-card">
-            <h3>Expenses</h3>
-            <p>$1,824</p>
-          </section>
-          <section class="current-num-card">
-            <h3>Credit Score</h3>
-            <p>673</p>
-          </section>
-        </div>
-        <div class="accounts-header">
-          <h2>Transaction History</h2>
-          <div class="">
-            <button class="add-acct">Expenses</button>
-            <button class="add-acct">Income</button>
-          </div>
-        </div>
 
-        <section class="account-cards">
-          <section class="account-card">
-            <img class="account-icon" src="./assets/income.svg" alt="Income Icon">
+    <body>
+        <nav>
+            <img class="rocket-icon" src="./assets/rocket.svg" alt="Rocket Icon">
+            <div class="nav-icons">
+                <img class="nav-icon" src="./assets/dashboard.svg" alt="Dashboard Icon">
+                <img class="nav-icon" src="./assets/transactions.svg" alt="Transactions Icon">
+                <img class="nav-icon" src="./assets/profile.svg" alt="Profile Icon">
+            </div>
+            <img id="hide" class="rocket-icon" src="./assets/rocket.svg" alt="Rocket Icon">
+        </nav>
+        <main>
+            <section class="left-section">
+                <h1>Your Budget</h1>
+                <div class="greeting-banner">
+                    <h2>Welcome, Oscar!</h2>
+                </div>
+                <div class="current-numbers">
+                    <section class="current-num-card">
+                        <h3>Income</h3>
+                        <p>$2,560</p>
+                    </section>
+                    <section class="current-num-card">
+                        <h3>Expenses</h3>
+                        <p>$1,824</p>
+                    </section>
+                    <section class="current-num-card">
+                        <h3>Credit Score</h3>
+                        <p>673</p>
+                    </section>
+                </div>
+                <div class="accounts-header">
+                    <h2>Transaction History</h2>
+                    <div class="">
+                        <button class="add-acct">Expenses</button>
+                        <button class="add-acct">Income</button>
+                    </div>
+                </div>
+
+                <section class="account-cards">
+                    <section class="account-card">
+                        <!-- <img class="account-icon" src="./assets/income.svg" alt="Income Icon">
             <div class="account-title">
               <h3>Paycheck</h3>
             </div>
@@ -57,9 +59,9 @@
               <h3>Target</h3>
             </div>
             <p>Shopping</p>
-            <h4>$132.44</h4>
-          </section>
-          <!-- <section class="account-card">
+            <h4>$132.44</h4> -->
+                    </section>
+                    <!-- <section class="account-card">
             <img class="account-icon" src="./assets/credit-card.svg" alt="Dashboard Icon">
             <div class="account-title">
               <h3>Amazon Credit</h3>
@@ -68,21 +70,21 @@
             <p>Active Status</p>
             <button class="acct-insights-btn"></button>
           </section> -->
-        </section>
-      </section>
+                </section>
+            </section>
 
-      <section class="right-section">
-        <div class="form-section">
-          <h2 class="new-trans-title">New Transactions</h2>
-          <form>
-            <label class="category-btn" for="">Type of Transaction:
+            <section class="right-section">
+                <div class="form-section">
+                    <h2 class="new-trans-title">New Transactions</h2>
+                    <form>
+                        <label class="category-btn" for="">Type of Transaction:
               <select class="typed-input" class="transaction-type">
                 <option value=""> - - Select one - - </option>
                 <option value="expenses">Expense</option>
                 <option value="income">Income</option>
               </select>
             </label>
-            <label for="from">Account from:
+                        <label for="from">Account from:
               <select class="typed-input" class="transaction-type">
                 <option value=""> - - Select one - - </option>
                 <option value="checking">Checking</option>
@@ -90,21 +92,22 @@
                 <option value="amazon-credit">Amazon Credit</option>
               </select>
             </label>
-            <label for="payee">Payee:
+                        <label for="payee">Payee:
               <input class="typed-input" id="payee" type="text">
             </label>
-            <label for="amount">Amount:
+                        <label for="amount">Amount:
               <input class="typed-input" id="amount" type="number">
             </label>
-            <label for="category">Category:
+                        <label for="category">Category:
               <input class="typed-input" id="category" type="dropdown">
             </label>
-            <input type="submit" value="Log Transaction">
-          </form>
-        </div>
-      </section>
-    </main>
-    <script type="text/javascript" src="./transaction.js"></script>
-    <script type="text/javascript" src="./script.js"></script>
-  </body>
+                        <input type="submit" value="Log Transaction">
+                    </form>
+                </div>
+            </section>
+        </main>
+        <script type="text/javascript" src="./transaction.js"></script>
+        <script type="text/javascript" src="./script.js"></script>
+    </body>
+
 </html>
