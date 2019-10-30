@@ -15,24 +15,26 @@ function addTransaction(event) {
     var category = inputs[4].value;
     var transaction = new Transaction(type, payee, amount, category);
     transactionsArr.push(transaction)
-    addCard(transaction)
+    addCard(transactionsArr)
 }
 
 function addCard(transaction) {
-    cards.innerHTML += `
+    for (var i = 0; i < transaction.length; i++)
+        cards.innerHTML += `
        <section class="account-card">
-         <img class="account-icon" src="./assets/${transaction.type}.svg" alt="Expenses Icon">
+         <img class="account-icon" src="./assets/${transaction[i].type}.svg" alt="Expenses Icon">
          <div class="account-title">
-           <h3>${transaction.payee}</h3>
+           <h3>${transaction[i].payee}</h3>
          </div>
-         <p>${transaction.category}</p>
-         <h4>$${transaction.amount}</h4>
+         <p>${transaction[i].category}</p>
+         <h4>$${transaction[i].amount}</h4>
        </section>
      `
     saveToStorage(transactionsArr)
 }
 
 function saveToStorage(array) {
+    console.log(array)
     var stringObj = JSON.stringify(array);
     localStorage.setItem('transaction', stringObj);
 }
@@ -47,21 +49,22 @@ function getFromStorage() {
 
 function reinstatiateObject(trans) {
     for (var i = 0; i < trans.length; i++) {
-        console.log('test')
         var instTransaction = new Transaction({
             type: trans[i].type,
             payee: trans[i].payee,
             amount: trans[i].amount,
             category: trans[i].category
         })
+        transactionsArr.push(instTransaction);
+        console.log(transactionsArr)
         cards.innerHTML += `
-       <section class="account-card">
-         <img class="account-icon" src="./assets/${trans[i].type}.svg" alt="Expenses Icon">
-         <div class="account-title">
-           <h3>${trans[i].payee}</h3>
-         </div>
-         <p>${trans[i].category}</p>
-         <h4>$${trans[i].amount}</h4>
-       </section>`
+             <section class="account-card">
+               <img class="account-icon" src="./assets/${trans[i].type}.svg" alt="Expenses Icon">
+               <div class="account-title">
+                 <h3>${trans[i].payee}</h3>
+               </div>
+               <p>${trans[i].category}</p>
+               <h4>$${trans[i].amount}</h4>
+             </section>`
     }
 }
